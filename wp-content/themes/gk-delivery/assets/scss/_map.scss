@@ -1,0 +1,57 @@
+.section-maps {
+    position: relative;
+    z-index: 1;
+    .map {
+        padding: 146px 0;
+        background-color: $primary-color;
+        background-image: url('../../assets/images/Map.png');
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+        border-radius: 24px;
+        @include media-down('840px') {
+            padding: 64px 0 257px;
+            background-image: url('../../assets/images/Map-mobile.png');
+            background-size: 100%;
+            background-position: 100% 100%;
+        }
+        &-title {
+            color: $white;
+            margin-bottom: 8px;
+            @include media-down('740px') {
+                font-size: 28px;
+                line-height: 32px;
+            }
+        }
+        &-text {
+            margin: 8px 0 56px;
+            @include media-down('1200px') {
+                margin-bottom: 40px;
+            }
+            p {
+                color: $colorText-secondary;
+                @include media-down('740px') {
+                    font-size: 13px;
+                    line-height: 19px;
+                }
+            }
+        }
+        &-info {
+            @include media-down('1200px') {
+                background-color: rgba(4, 37, 89, .5);
+                display: inline-block;
+                padding-right: 10px;
+            }
+            @include media-down('740px') {
+                background-color: transparent;
+                padding-right: 0;
+            }
+            .section-button {
+                .btn-primary {
+                    @include media-down('480px') {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

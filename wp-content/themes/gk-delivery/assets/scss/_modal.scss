@@ -1,0 +1,34 @@
+
+    .modal {
+        &-dialog {
+            max-width: 752px;
+        }
+        .modal-content {
+            padding: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            z-index: 1;
+        }
+        .btn-close {
+            position: absolute;
+            z-index: 1;
+            top: 13px;
+            right: 13px;
+        }
+        .title-modal {
+            margin: 15px 0 4px;
+        }
+        .text-modal {
+            text-align: center;
+            margin-top: 4px;
+        }
+        .text-modal.out {
+            margin-bottom: 28px;
+        }
+        .section-button {
+            margin-top: 28px;
+        }
+    }

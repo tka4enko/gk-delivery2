@@ -1,0 +1,110 @@
+.labor {
+    position: relative;
+    z-index: 1;
+    &-global {
+        .colons-slider {
+            margin: 40px 0 56px -12px;
+            @include media-down('980px') {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                z-index: 1;
+                margin: 25px -12px;
+                .slick-list {
+                    padding-right: 95px;
+                }
+            }
+            & .icon-angle-left,
+            & .icon-angle-right {
+                position: absolute;
+                top: 40%;
+            }
+            .labor-col {
+                padding: 0 12px;
+                width: 25%;
+                @include media-down('980px') {
+                    padding: 0 8px;
+                    width: 264px ;
+                }
+                .labor-card {
+                    border-radius: 24px;
+                    overflow: hidden;
+                    background-color: $white;
+                    box-shadow: 0px 8px 24px rgba(18, 18, 18, 0.1);
+                    height: 374px;
+                }
+                .labor-info {
+                    padding: 18px 24px;
+                    @include media-down('980px') {
+                        padding: 8px 16px;
+                    }
+                    .number p {
+                        color: $color-number;
+                        font-weight: 700;
+                    }
+                }
+                .labor-img {
+                    margin-bottom: 16px;
+                    display: flex;
+                    justify-content: center;
+                    
+                }
+            }
+        }
+        .labor-description {
+            text-align: center;
+            margin: 16px 0 40px;
+        }
+        .labor-title {
+            margin: 16px 0 8px;
+        }
+        .labor-text {
+            margin-top: 8px;
+        }
+        .section-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .btn-primary {
+                @include media-down('590px') {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .slick-slide {
+        height: 374px;
+    }
+    .slick-list {
+        padding-bottom: 15px;
+    }
+}
+button.slick-prev.slick-arrow,
+button.slick-next.slick-arrow {
+    font-size: 0;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    background-size: 100%;
+    background-position: 100% 100%;
+}
+button.slick-prev.slick-arrow {
+    background-image: url('../../assets/images/left.png');
+    position: absolute;
+    z-index: 1;
+    bottom: -40%;
+    left: 45%;
+    @include media-down('520px') {
+        left: 40%;
+    }
+}
+button.slick-next.slick-arrow {
+    background-image: url('../../assets/images/right.png');
+    position: absolute;
+    z-index: 1;
+    bottom: -40%;
+    right: 45%;
+    @include media-down('520px') {
+        right: 40%;
+    }
+}

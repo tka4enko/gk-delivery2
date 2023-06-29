@@ -1,0 +1,78 @@
+.section-hero {
+    position: relative;
+    z-index: 1;
+    .decor {
+        position: absolute;
+        z-index: 1;
+        top: 390px;
+        @include media-down('872px') {
+            display: none;
+        }
+    }
+    .hero-text p {
+        color: $colorText-secondary;
+        @include media-down('1120px') {
+            font-size: 13px;
+            line-height: 19px;
+        }
+    }
+    .hero-general {
+        background-color: $primary-color;
+        display: flex;
+        justify-content: end;
+        border-radius: 24px;
+        overflow: hidden;
+        @include media-down('872px') {
+            flex-direction: column-reverse;
+        }
+        &-left {
+            max-width: 45%;
+            margin: 199px 20px 199px 44px;
+            @include media-down('1120px') {
+                margin: 99px 20px 99px 44px;
+            }
+            @include media-down('872px') {
+                padding: 29px 40px 68px 40px;
+                display: flex;
+                flex-direction: column;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+            @include media-down('590px') {
+                padding: 29px 16px 68px 16px;
+            }
+            .hero-title {
+                margin-bottom: 16px;
+                font-size: 56px;
+                line-height: 58px;
+                @include media-down('1120px') {
+                    font-size: 42px;
+                    line-height: 44px;
+                }
+                @include media-down('480px') {
+                    margin-bottom: 4px;
+                }
+            }
+            .hero-text {
+                margin: 16px 0 56px;
+                @include media-down('480px') {
+                    margin: 4px 8px 40px 0;
+                }
+            }
+        }
+        &-right {
+            @include media-down('872px') {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        .btn.btn-secondary {
+            @include media-down('480px') {
+                font-size: $base-size;
+                width: 100%;
+                padding: 14px 40px;
+                line-height: $base-height;
+            }
+        }
+    }
+}

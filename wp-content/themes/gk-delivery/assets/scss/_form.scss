@@ -1,0 +1,137 @@
+.form {
+    &-global {
+        background-color: $primary-color;
+        padding: 104px 0;
+        border-top-right-radius: 24px;
+        border-top-left-radius: 24px;
+    }
+    &-description {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+        @include media-down('720px') {
+            justify-content: start;
+            align-items: start;
+            text-align: left;
+        }
+        &-title {
+            color: $white;
+            margin-bottom: 8px;
+            width: 60%;
+            @include media-down('920px') {
+                margin-bottom: 4px;
+            }
+            @include media-down('720px') {
+                width: 100%;
+                font-size: 28px;
+                line-height: 32px;
+            }
+        }
+        &-text {
+            p {
+                color: $colorText-secondary;
+                @include media-down('720px') {
+                    font-size: 13px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+    &-contact {
+        display: flex;
+        position: relative;
+        z-index: 1;
+        @include media-down('920px') {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-image {
+        margin-right: 24px;
+        display: flex;
+        @include media-down('920px') {
+            margin: 0 0 24px 0;
+
+        }
+    }
+    &-wrapper {
+        margin-bottom: 32px;
+        position: relative;
+        &-button {
+            margin-top: 40px;
+            margin-bottom: 0;
+            @include media-down('960px') {
+                margin-top: 20px;
+            }
+            .btn-secondary {
+                border: none;
+                width: 100%;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        .label {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 24px;
+            transform: translateY(-50%);
+            p {
+                color: $color-text;
+            }
+            span {
+                color: #FF8178;
+            }
+        }
+    }
+}
+.form-application {
+    margin: 0;
+    width: 50%;
+    @include media-down('920px') {
+        width: 100%;
+    }
+    input {
+        padding: 17px 24px;
+        border-radius: 8px;
+        width: 100%;
+        font-size: $base-size;
+        line-height: $base-height;
+        font-weight: 400;
+        @include media-down('720px') {
+            padding: 15px 16px;
+        }
+        &:focus {
+            &::placeholder {
+                font-size: 0;
+            }
+        }
+    }
+}
+.wpcf7 form.failed {
+    border-color: #dc3232;
+    color: white;
+    padding: 10px;
+}
+.wpcf7 form.sent {
+    .wpcf7-response-output {
+        display: none;
+    }
+}
+.wpcf7-not-valid-tip {
+    position: absolute;
+    font-size: 14px;
+    margin-top: 3px;
+}
+.wpcf7 form .wpcf7-response-output {
+    margin: 20px 0 0 0;
+    color: $white;
+    padding: 5px 0 5px 10px;
+    font-size: 12px;
+}
